@@ -1,0 +1,13 @@
+school.management.system
+school.management.system.data
+school.management.system.model
+school.management.system.model.adm
+school.management.system.model.student
+school.management.system.model.subject
+school.management.system.model.teacher
+school.management.system.service
+school.management.system.ui
+school.management.system.ui.adm
+school.management.system.ui.student
+school.management.system.ui.teacher
+school.management.system.util
