@@ -62,7 +62,7 @@ When the application runs for the first time and no admin exists in the database
 
 - If you see a NullPointerException related to menus at startup, ensure the `App` class initializes the menu bar before panels (this project already guards that initialization order).
 - If the dashboard shows zeros, ensure an admin is logged in — the dashboard intentionally displays zeros until an admin logs in for security.
-- Database file is located at `libs/db/main.db`. If you need to reset data during testing, stop the app and remove or replace that file (be careful — this deletes data).
+- Database file is located at `libs/db/main.db`. If you need to reset data during testing, stop the app and remove or replace that file (be careful — this deletes data). Ignore those pop-up error messages when restarting the app without the `main.db` file. A new one is automatically created. 
 
 ## Contributing
 
@@ -74,6 +74,6 @@ If you'd like to contribute, please:
 
 ## Quick dev notes
 
-- The `Functions` class contains login/logout helpers. `Functions.attemptAutoLogin()` restores a logged-in admin by reading `isAdminLoggedIn` and a saved `lastAdminUser` preference, then populating the in-memory `Admin` object from the DB.
-- The `MainPanel` contains the greeting label and guards to keep admin-only UI disabled until `Functions.setLoggedIn(true)` is called.
+- The `AuthService` class contains login/logout helpers. `AuthService.attemptAutoLogin()` restores a logged-in admin by reading `isAdminLoggedIn` and a saved `lastAdminUser` preference, then populating the in-memory `Admin` object from the DB.
+- The `MainPanel` contains the greeting label and guards to keep admin-only UI disabled until `AuthService.setLoggedIn(true)` is called.
 
