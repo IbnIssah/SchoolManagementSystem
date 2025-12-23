@@ -1,0 +1,5 @@
+# Ignore all files in the bin directory
+/.vscode
+/bin
+/docs
+/School Management System.jar

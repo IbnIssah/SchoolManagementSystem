@@ -27,7 +27,8 @@ public class Admin {
   private String userName;
 
   /**
-   * Password of the admin.
+   * Password of the admin (not included in the toString method for security reasons).
    */
+  @ToString.Exclude
   private String password;
 }
